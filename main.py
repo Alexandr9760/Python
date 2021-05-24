@@ -1,10 +1,9 @@
-money = input("Введите желаемую сумм вложенных средств")
-L = (float(money))
-per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
-per_cent['ТКБ'] = (round(L * 0.056))
-per_cent['СКБ'] = (round(L * 0.059))
-per_cent['ВТБ'] = (round(L * 0.0428))
-per_cent['СБЕР'] = (round(L * 0.04))
-print("Депозит", per_cent)
-maxd = max(per_cent, key=per_cent.get)
-print("Максимальный депозит в", maxd)
+class Rectangle():
+    def __init__(self, l, w):
+        self.lenght = l
+        self.width = w
+    def rectangle_area(self):
+        return self.lenght*self.width
+
+newRectangle = Rectangle(12, 10)
+print(newRectangle.rectangle_area())
