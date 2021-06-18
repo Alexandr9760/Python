@@ -32,7 +32,7 @@ def convert(message: telebot.types.Message):
         total_base = CryptoConverter.get_price(quote, base, amount)
     except APIException as e:
         bot.reply_to(message, f'Ошибка пользователя.\n{e}')
-    except Exception as e:
+    except Exception as  e:
         bot.reply_to(message, f'Ну удалось обработать команду\n{e}')
     else:
         text = f'Цена {amount} {quote} в {base} - {total_base}'
